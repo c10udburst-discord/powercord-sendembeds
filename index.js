@@ -14,7 +14,7 @@ module.exports = class SendEmbeds extends Plugin {
 
         // parse and clean json input
         try {
-          discordEmbed = JSON.parse(args[0])
+          discordEmbed = JSON.parse(args.join(' '))
           if (discordEmbed.color !== undefined
               && discordEmbed.color.match !== undefined
               && discordEmbed.color.match(/^#?[0-9A-Z]{6}/gi) !== undefined) {
